@@ -10,7 +10,7 @@ From the dataset we used the following files:
 
 The features in the tidy data set at the end of the script contains the average of the mean and std measurements for each person and activity
 
-The factors:
+The features:
 - person - the subject of the measurments
 - activity - the type of activity(levels=("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"))
 - tBodyAcc.mean...X
