@@ -8,24 +8,94 @@ From the dataset we used the following files:
 - 'test/y_test.txt': Test labels.
 - 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample
 
+The features in the tidy data set at the end of the script contains the average of the mean and std measurements for each person and activity
 
-1. Loaded the features.txt file and extracted the names of the fetures
-2. Loaded the test set and set the names of it's columns to the names extracted in step 1.
-3. Loaded the test labels and converted the values to factor variables(1-6)
-4. Loaded the test subject data set
-5. Loaded the train set and set the names of it's columns to the names extracted in step 1.
-6. Loaded the train labels and converted the values to factor variables(1-6)
-7. Loaded the train subject data set
-8. Renamed the column name of the test labels data to "activity"
-9. Renamed the column name of the test subject data to "person"
-10. Renamed the column name of the train labels data to "activity"
-11. Renamed the column name of the train subject data to "person"
-12. Changed the factor levels labels on the test data set so it's more easily readable. The new factor names reflect the coresponding activities
-13. Changed the factor levels labels on the train data set so it's more easily readable. The new factor names reflect the coresponding activities
-14. Joined the test data set, test labels data set, and subject test data set into one table
-15. Joined the train data set, train labels data set, and subject train data set into one table
-16. Binded the rows of the two joined data sets.
-17. Selected the activity, subject rows and the rows that contain the measurements of the mean and standard deviation for each measurement. This is our tidy data set.
-18. Made a new tidy data set with the average of the measurements from the data set from step 17., for each subject and activity.
-
-
+The factors:
+- person - the subject of the measurments
+- activity - the type of activity(levels=("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING"))
+- tBodyAcc.mean...X
+- tBodyAcc.mean...Y
+- tBodyAcc.mean...Z
+- tBodyAcc.std...X
+- tBodyAcc.std...Y
+- tBodyAcc.std...Z
+- tGravityAcc.mean...X
+- tGravityAcc.mean...Y
+- tGravityAcc.mean...Z
+- tGravityAcc.std...X
+- tGravityAcc.std...Y
+- tGravityAcc.std...Z
+- tBodyAccJerk.mean...X
+- tBodyAccJerk.mean...Y
+- tBodyAccJerk.mean...Z
+- tBodyAccJerk.std...X
+- tBodyAccJerk.std...Y
+- tBodyAccJerk.std...Z
+- tBodyGyro.mean...X
+- tBodyGyro.mean...Y
+- tBodyGyro.mean...Z
+- tBodyGyro.std...X
+- tBodyGyro.std...Y
+- tBodyGyro.std...Z
+- tBodyGyroJerk.mean...X
+- tBodyGyroJerk.mean...Y
+- tBodyGyroJerk.mean...Z
+- tBodyGyroJerk.std...X
+- tBodyGyroJerk.std...Y
+- tBodyGyroJerk.std...Z
+- tBodyAccMag.mean..
+- tBodyAccMag.std..
+- tGravityAccMag.mean..
+- tGravityAccMag.std..
+- tBodyAccJerkMag.mean..
+- tBodyAccJerkMag.std..
+- tBodyGyroMag.mean..
+- tBodyGyroMag.std..
+- tBodyGyroJerkMag.mean..
+- tBodyGyroJerkMag.std..
+- fBodyAcc.mean...X
+- fBodyAcc.mean...Y
+- fBodyAcc.mean...Z
+- fBodyAcc.std...X
+- fBodyAcc.std...Y
+- fBodyAcc.std...Z
+- fBodyAcc.meanFreq...X
+- fBodyAcc.meanFreq...Y
+- fBodyAcc.meanFreq...Z
+- fBodyAccJerk.mean...X
+- fBodyAccJerk.mean...Y
+- fBodyAccJerk.mean...Z
+- fBodyAccJerk.std...X
+- fBodyAccJerk.std...Y
+- fBodyAccJerk.std...Z
+- fBodyAccJerk.meanFreq...X
+- fBodyAccJerk.meanFreq...Y
+- fBodyAccJerk.meanFreq...Z
+- fBodyGyro.mean...X
+- fBodyGyro.mean...Y
+- fBodyGyro.mean...Z
+- fBodyGyro.std...X
+- fBodyGyro.std...Y
+- fBodyGyro.std...Z
+- fBodyGyro.meanFreq...X
+- fBodyGyro.meanFreq...Y
+- fBodyGyro.meanFreq...Z
+- fBodyAccMag.mean..
+- fBodyAccMag.std..
+- fBodyAccMag.meanFreq..
+- fBodyBodyAccJerkMag.mean..
+- fBodyBodyAccJerkMag.std..
+- fBodyBodyAccJerkMag.meanFreq..
+- fBodyBodyGyroMag.mean..
+- fBodyBodyGyroMag.std..
+- fBodyBodyGyroMag.meanFreq..
+- fBodyBodyGyroJerkMag.mean..
+- fBodyBodyGyroJerkMag.std..
+- fBodyBodyGyroJerkMag.meanFreq..
+- angle.tBodyAccMean.gravity.
+- angle.tBodyAccJerkMean..gravityMean.
+- angle.tBodyGyroMean.gravityMean.
+- angle.tBodyGyroJerkMean.gravityMean.
+- angle.X.gravityMean.
+- angle.Y.gravityMean.
+- angle.Z.gravityMean.
